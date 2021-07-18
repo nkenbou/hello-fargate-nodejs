@@ -1,13 +1,13 @@
 // Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: MIT-0
 import Head from "next/head";
-import styles from "./layout.module.css";
-import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import utilStyles from "../styles/utils.module.css";
+import styles from "./layout.module.css";
 import Logo from "./logo";
 
 export const siteTitle = "Hello App Runner and Copilot!";
-export const topPageMessage = "Let's Get Started!";
+export const topPageMessage = "Happy building with Fargate and Copilot!";
 
 export default function Layout({ children, home }) {
   return (
