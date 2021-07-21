@@ -9,10 +9,23 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Home() {
   const { data, error } = useSwr("/api/items", fetcher);
-  const { tdata, error } = useSwr("/api/tablecount", fetcher);
+  const { tdata, terror } = useSwr("/api/tablecount", fetcher);
   return (
     <Layout home>
-      <p>{tdata.count}</p>
+      {tdata ? (
+        <p>{tdata.count}</p>
+      ) : (
+        <>
+          {terror ? (
+            <div>Failed to connect DB.</div>
+          ) : (
+            <li className={utilStyles.listItem} key="list-item-dummy">
+              Loading... ⏳
+            </li>
+          )}
+        </>
+      )}
+
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <ul className={utilStyles.list}>
           {data ? (
