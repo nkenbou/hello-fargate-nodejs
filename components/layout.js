@@ -7,7 +7,7 @@ import styles from "./layout.module.css";
 import Logo from "./logo";
 
 export const siteTitle = "Hello App Runner and Copilot!";
-export const topPageMessage = "Happy building with Fargate and Copilot!";
+export const topPageMessage = "Happy building with Fargate and Copilot!!";
 
 export default function Layout({ children, home }) {
   return (
