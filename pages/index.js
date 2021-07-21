@@ -15,15 +15,7 @@ export default function Home() {
       {tdata ? (
         <p>{tdata.count}</p>
       ) : (
-        <>
-          {terror ? (
-            <div>Failed to connect DB.</div>
-          ) : (
-            <li className={utilStyles.listItem} key="list-item-dummy">
-              Loading... ⏳
-            </li>
-          )}
-        </>
+        <>{terror ? <p>Failed to connect DB.</p> : <p>Loading... ⏳</p>}</>
       )}
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
