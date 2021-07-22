@@ -38,7 +38,3 @@ exec: true # Enable running commands in your container.
 #environments:
 #  test:
 #    count: 2               # Number of tasks to run for the "test" environment.
-network:
-  vpc:
-    security_groups:
-      - "sg-05e7b9574c9bb6cd2"
