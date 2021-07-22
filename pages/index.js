@@ -9,7 +9,10 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Home() {
   const { data, error } = useSwr("/api/items", fetcher);
-  const { tdata, terror } = useSwr("/api/tablecount", (url) => fetch(url));
+  const { tdata, terror } = useSwr("/api/tablecount", async (url) => {
+    const response = await fetch(url);
+    return response.json();
+  });
   console.log(tdata);
   console.log(terror);
   return (
